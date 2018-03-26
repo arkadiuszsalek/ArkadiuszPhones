@@ -1,0 +1,25 @@
+
+<p class="w3-center" id="bt" style="display:none"> <%= link_to 'New Phone', new_phone_path , :class => "w3-button w3-padding-large w3-white w3-border", :role => "button" %></p>
+
+<% @phones.each do |phone| %>
+
+<div class="w3-card-4 w3-margin w3-light-grey">
+
+    <div class="w3-container">
+      <div class="w3-row">
+        <div style="padding:20px" class="w3-col m8 s12">
+        <%= phone.brand %> </br>
+        <%= phone.model %></br>
+        <%= phone.price %></br>
+        <%= phone.description %></br>
+        <%= link_to 'Show', phone ,:class => "w3-button w3-padding-large w3-blue-grey w3-border", :role => "button"  %>
+        <%= link_to 'Edit', edit_phone_path(phone) , :class => "w3-button w3-padding-large w3-blue-grey w3-border", :role => "button" %>
+        <%= link_to 'Destroy', phone, method: :delete, data: { confirm: 'Are you sure?' } , :class => "w3-button w3-padding-large w3-blue-grey w3-border", :role => "button" %>
+       
+     
+      </div>
+     </div>
+   </div>
+  </div><hr>
+
+<% end %>

@@ -1,0 +1,38 @@
+<%= form_with(model: phone, local: true) do |form| %>
+  <% if phone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(phone.errors.count, "error") %> prohibited this phone from being saved:</h2>
+
+      <ul>
+      <% phone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<form class="w3-container w3-card-4 w3-light-grey">
+  <div>
+    <%= form.label :brand  %>
+    <%= form.text_field :brand, :class =>"w3-input w3-border", id: :phone_brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model,:class =>"w3-input w3-border", id: :phone_model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price,:class =>"w3-input w3-border", id: :phone_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description,:class =>"w3-input w3-border", id: :phone_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+</form>
+<% end %>

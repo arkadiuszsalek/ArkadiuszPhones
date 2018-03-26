@@ -1,0 +1,18 @@
+
+
+<div class="w3-card-4 w3-margin w3-light-grey">
+
+    <div class="w3-container">
+      <div style="padding:10px" class="w3-row">
+        <div class="w3-col m8 s12">
+
+
+            <h2>Editing Phone</h2>
+            
+            <%= render 'form', phone: @phone%>
+            <%= link_to 'Show', @phone, :class => "w3-button w3-padding-large w3-blue-grey w3-border", :role => "button" %> 
+            <%= link_to 'Back', phones_path, :class => "w3-button w3-padding-large w3-blue-grey w3-border", :role => "button" %>
+        </div>
+      </div>
+    </div>
+</div>

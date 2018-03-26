@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ArkadiuszPhones</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+  
+    
+    <script>
+      $(document).ready(function(){
+              $("#sld").slideDown("slow");
+      });
+       $(document).ready(function(){
+              $("#bt").show(2000);
+      });
+      
+    </script>
+    <div style="padding:10px" class="w3-container  w3-black">
+        <h1 class="w3-center">PHONES</h1>
+        <div id="sld" style=" padding: 20px; display: none " class="w3-row-padding w3-margin-top">
+            <div class="w3-third">
+              <div class="w3-card">
+                  <%= image_tag("zum.jpeg", alt:"Nature", id:"Welcome", style:"width:100%")%>
+                <div class="w3-container">
+                </div>
+              </div>
+            </div>
+          
+            <div class="w3-third">
+              <div class="w3-card">
+                 <%= image_tag("zaza.jpeg", alt:"Nature", id:"Welcome2", style:"width:100%")%>
+                <div class="w3-container">
+                </div>
+              </div>
+            </div>
+          
+            <div class="w3-third">
+              <div class="w3-card">
+               <%= image_tag("logo.jpeg", alt:"Nature", id:"Welcome3", style:"width:100%")%>
+                <div class="w3-container">
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>
